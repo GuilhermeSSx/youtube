@@ -15,12 +15,12 @@ function VideoComponent( {video}: any) {
             <ImageBanner src={video.image} />
             <TitleContainer>
                 <ChannelImage>
-                    GSS
+                    USR
                 </ChannelImage>
                 <TextContainer>
-                    <Title>{video.title}</Title>
+                    <Title title={video.title}>{video.title}</Title>
                     <TextCard>{video.channel}</TextCard>
-                    <TextCard>{video.views} de visualizações - há {video.time}</TextCard>
+                    <TextCard>{video.views} de visualizações ▪ há {video.time}</TextCard>
                 </TextContainer>
             </TitleContainer>
         </Container>

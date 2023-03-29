@@ -1,5 +1,6 @@
 import { useState, useContext } from 'react';
 import { UserContext } from '../../contexts/userContext';
+import { ButtonLogin, Container, FormContainer, Divider, InputLogin } from './styles';
 
 function Login() {
     const { handleLogin } = useContext(UserContext);
@@ -8,12 +9,23 @@ function Login() {
     const [password, setPassword] = useState('');
 
     return (
-        <>
-            <div>login</div>
-            <input type='email' value={email} onChange={(e) => setEmail(e.target.value)} />
-            <input type='password' value={password} onChange={(e) => setPassword(e.target.value)}/>
-            <button onClick={() => handleLogin(email, password)}>login</button>
-        </>
+        <Container>
+            <FormContainer>
+                <h3>Realizar Login</h3>
+                <InputLogin placeholder='email' type='email' value={email} onChange={(e) => setEmail(e.target.value)} />
+                <InputLogin placeholder='password' type='password' value={password} onChange={(e) => setPassword(e.target.value)}/>
+                <ButtonLogin onClick={() => handleLogin(email, password)}>Login</ButtonLogin>
+            </FormContainer>
+            <Divider />
+            <FormContainer>
+                <h3>Não possui cadastro ?</h3>
+                <InputLogin placeholder='nome' type='name' />
+                <InputLogin placeholder='email' type='email' />
+                <InputLogin placeholder='password' type='password' />
+                <ButtonLogin onClick={() => handleLogin(email, password)}>Cadastrar</ButtonLogin>
+            </FormContainer>
+        </Container>
+
     )
 }
 

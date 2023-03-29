@@ -11,8 +11,8 @@ function Shorts() {
     return (
         <Container>
             <ShortsContainer>
-                <ShortBanner src="https://i.ytimg.com/vi/OupmuAVGsLM/oar2.jpg?sqp=-oaymwEaCJUDENAFSFXyq4qpAwwIARUAAIhCcAHAAQY=&rs=AOn4CLADwVZPqXg_wKFWPd0djvMSJAKYgA" />
-                <ShortTitle>GRINGO TENTANDO PEDIR ALGO NO...</ShortTitle>
+                <ShortBanner src="https://i.ytimg.com/vi/nZabgxkevQg/oar2.jpg?sqp=-oaymwEaCJUDENAFSFXyq4qpAwwIARUAAIhCcAHAAQY=&rs=AOn4CLBu8LBfLeL_7lMzLACXWv-z3Ddl1w" />
+                <ShortTitle>Shorts...</ShortTitle>
                 <TextShort>5,1 mi de visualizações</TextShort>
             </ShortsContainer>
         </Container>

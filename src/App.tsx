@@ -1,7 +1,8 @@
 import Header from "./components/header";
 import Menu from "./components/menu";
+import './App.css';
 import { UserContext } from "./contexts/userContext";
-import { useContext } from 'react';
+import { useContext } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/home";
 import Library from "./pages/library";
@@ -16,13 +17,13 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Header />
-        <div style={{ width: '100%', display: 'flex' }}>
+        <div className="Content">
           <div>
             <Menu openMenu={openMenu}/>
           </div>
-          <div style={{ width: '100%', padding: '20px 30px', boxSizing: 'border-box'}}>
+          <div>
             <Routes>
-              <Route path='/' element={<Home />} />
+              <Route path='/' element={<Home openMenu={openMenu}/>} />
               <Route path='/library' element={<Library />} />
               <Route path='/history' element={<History />} />
               <Route path='/login' element={<Login />} />

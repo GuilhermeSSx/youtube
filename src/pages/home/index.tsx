@@ -14,8 +14,8 @@ const videos = [
     },
     {
         image: 'https://i.ytimg.com/vi/AYrVDgcliF4/maxresdefault.jpg',
-        title: 'Power Rangers: Agora e Sempre | Trailer oficial | Netflix Netflix Brasil ',
-        channel: 'Bruno Bandeira',
+        title: 'DESENVOLVENDO BOT DE DISCORD COM JAVASCRIPT E COLOCANDO NO AR! @@@',
+        channel: 'Netflix Brasil',
         views: '1,5 milhões',
         time: '2 dias'
     },
@@ -27,47 +27,51 @@ const videos = [
         time: '2 dias'
     },
     {
-        image: '',
+        image: 'https://i.ytimg.com/vi/AYrVDgcliF4/maxresdefault.jpg',
+        title: 'Power Rangers: Agora e Sempre | Trailer oficial | Netflix Netflix Brasil ',
+        channel: 'Bruno Bandeira',
+        views: '1,5 milhões',
+        time: '2 dias'
+    },
+    {
+        image: 'https://i.ytimg.com/vi/EA_6MTfcAm8/hq720.jpg?sqp=-oaymwEjCOgCEMoBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLD9jVuAX5eW4LMeTorx2oMizSKCDg',
         title: 'ACABOU A COMPETIÇÃO!',
         channel: 'Bruno Bandeira',
         views: '1,5 milhões',
         time: '2 dias'
     },
     {
-        image: '',
-        title: 'ACABOU A COMPETIÇÃO!',
+        image: 'https://i.ytimg.com/vi/AYrVDgcliF4/maxresdefault.jpg',
+        title: 'DESENVOLVENDO BOT DE DISCORD COM JAVASCRIPT E COLOCANDO NO AR! @@@',
+        channel: 'Netflix Brasil',
+        views: '1,5 milhões',
+        time: '2 dias'
+    },
+    {
+        image: 'https://i.ytimg.com/vi/V2qjFtnOxTA/maxresdefault.jpg',
+        title: 'Toda a gente é crítica | Pica-Pau',
         channel: 'Bruno Bandeira',
         views: '1,5 milhões',
         time: '2 dias'
     },
     {
-        image: '',
-        title: 'ACABOU A COMPETIÇÃO!',
-        channel: 'Bruno Bandeira',
-        views: '1,5 milhões',
-        time: '2 dias'
-    },
-    {
-        image: '',
-        title: 'ACABOU A COMPETIÇÃO!',
-        channel: 'Bruno Bandeira',
-        views: '1,5 milhões',
-        time: '2 dias'
-    },
-    {
-        image: '',
-        title: 'ACABOU A COMPETIÇÃO!',
+        image: 'https://i.ytimg.com/vi/AYrVDgcliF4/maxresdefault.jpg',
+        title: 'Power Rangers: Agora e Sempre | Trailer oficial | Netflix Netflix Brasil ',
         channel: 'Bruno Bandeira',
         views: '1,5 milhões',
         time: '2 dias'
     }
 ]
 
-function Home() {
+interface IProps {
+    openMenu: boolean
+}
+
+function Home({ openMenu }: IProps) {
     return (
-        <div>
+        <div className="content">
             <Categories />
-            <Container>
+            <Container openMenu={openMenu}>
                 {videos.map((video) => (
                     <VideoComponent video={video}/>
                 ))}
@@ -85,11 +89,10 @@ function Home() {
                 <Shorts />
                 <Shorts />
                 <Shorts />
-                <Shorts />
             </ShortsContainer>
 
             <Divider />
-            <Container>
+            <Container openMenu={openMenu}>
                 {videos.map((video) => (
                     <VideoComponent video={video}/>
                 ))}

@@ -25,8 +25,6 @@ export const CtButton = styled.button`
     align-items: center;
     justify-content: center;
     padding: 15px;
-
-
     :hover {
         background-color: rgba(0, 0, 0, 0.1);
         transition: .5s;

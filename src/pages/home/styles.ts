@@ -1,13 +1,14 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
-    width: 100%;
-    max-width: 1600px;
+export const Container = styled.div<{ openMenu: boolean }>`
+    width: 100wh;
+    max-width: 2000px;
     display: grid; 
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: ${({ openMenu}) => openMenu? 'repeat(4, 1fr)' : 'repeat(5, 1fr)'};
     column-gap: 20px;
     row-gap: 40px;
-    margin-top: 50px;
+    margin-top: 74px;
+    margin-left: 20px;
 `;
 
 export const ShortsContainer = styled.div`

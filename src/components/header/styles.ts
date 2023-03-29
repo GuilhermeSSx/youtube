@@ -11,6 +11,7 @@ export const Container = styled.header`
     justify-content: space-between;
     position: sticky;
     top: 0px;
+    z-index: 1;
 `;
 
 export const LogoContainer = styled.div`
@@ -34,6 +35,7 @@ export const ButtonContainer = styled.div<{ margin?: string }>`
 
 export const ButtonIcon = styled.img`
     width: 20px;
+    justify-content: space-between;
 `;
 
 export const SearchContainer = styled.div`
@@ -70,9 +72,80 @@ export const SearchButton = styled.div`
 `;
 
 export const HeaderButtons = styled.div`
-    width: 200px;
+    width: 225px;
+    height: 40px;
     display: flex;
+    align-items: center;
 `;
+
+export const ButtonLogin = styled.button`
+    width: 128px;
+    height: 34px;
+    padding: 0 15px;
+    border-width: 1px;
+    border-style: solid;
+    background-color: white;
+    color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    outline: none;
+    font-size: 15px;
+    font-weight: 500;
+    margin-left: 5px;
+    &:hover {
+        background-color: rgba(0, 153, 255, 0.1);
+        border: none;
+    }
+`;
+
+export const DropDown = styled.div`
+    position: relative;
+    transform: scale(1);
+    z-index: 1000;
+
+`;
+
+export const DropDownMenu = styled.div<{ dropMenu: boolean }>`
+    visibility: ${({ dropMenu }) => dropMenu ? 'visible' : 'hidden'};
+    background-color: #fff;
+    width: 250px;
+    height: auto;
+    border: 1px solid #d3d3d3;
+    position: absolute;
+    left: -130px;
+    top: calc(100% + 5px);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+    li {
+        list-style: none;
+        width: 100%;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        font-size: 15px;
+        cursor: pointer;
+        :hover {
+            background-color: #d3d3d3;
+            border-radius: 10px;
+        }
+    }
+`;
+
+export const DropDownItem = styled.div`
+    display: flex;
+    flex-direction: column;
+    span {
+        font-weight: 450;
+        margin: 20px;
+        font-size: 16px;
+    }
+`;
+
+
 
 export const Divider = styled.div`
     width: 100%;

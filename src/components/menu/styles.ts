@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 export const Container = styled.div<{ openMenu: boolean }>`
-    width: ${({ openMenu}) => openMenu? '250px' : '100px'};
+    width: ${({ openMenu}) => openMenu? '250px' : '72px'};
     height: calc(100vh - 55px);
     box-sizing: border-box;
-    padding: 10px 10px 10px 10px;
+    padding: ${({ openMenu}) => openMenu? '10px 10px 10px 10px' : '5px 5px 5px 5px'};
     display: flex;
     align-items: center;
     flex-direction: column;
