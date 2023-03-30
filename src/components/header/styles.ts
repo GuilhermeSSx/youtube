@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
+
 export const Container = styled.header`
     width: 100%;
     height: 55px;
@@ -12,6 +13,13 @@ export const Container = styled.header`
     position: sticky;
     top: 0px;
     z-index: 1;
+
+    img {
+        -webkit-user-drag: none; 
+        -khtml-user-drag: none; 
+        -moz-user-drag: none; 
+        -o-user-drag: none; 
+    }
 `;
 
 export const LogoContainer = styled.div`
@@ -34,7 +42,7 @@ export const ButtonContainer = styled.div<{ margin?: string }>`
 `;
 
 export const ButtonIcon = styled.img`
-    width: 20px;
+    width: 18px;
     justify-content: space-between;
 `;
 
@@ -69,6 +77,9 @@ export const SearchButton = styled.div`
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    &:hover {
+        background-color: #f2f2f2;
+    }
 `;
 
 export const HeaderButtons = styled.div`
@@ -104,9 +115,6 @@ export const ButtonLogin = styled.button`
 
 export const DropDown = styled.div`
     position: relative;
-    transform: scale(1);
-    z-index: 1000;
-
 `;
 
 export const DropDownMenu = styled.div<{ dropMenu: boolean }>`

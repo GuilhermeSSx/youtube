@@ -16,7 +16,7 @@ import HamburguerIcon from '../../assets/hamburger.png';
 import Logo from '../../assets/youtube-logo.png';
 import Lupa from '../../assets/search.png';
 import MicIcon from '../../assets/microfone.png';
-import VideoIcon from '../../assets/video.png';
+import VideoIcon from '../../assets/upload_video.png';
 import Notification from '../../assets/sino.png';
 import Logout from "../../assets/logout.png";
 import { UserContext } from "../../contexts/userContext";
@@ -59,7 +59,7 @@ function Header() {
             </SearchContainer>
             { /* 3 */}
             <HeaderButtons>
-                <ButtonContainer margin='0 0 0 10px'>
+                <ButtonContainer onClick={() => navigate('/upload_video')} margin='0 0 0 10px'>
                     <ButtonIcon alt="" src={VideoIcon} />
                 </ButtonContainer>
                 <ButtonContainer margin='0 0 0 10px'>
@@ -85,7 +85,7 @@ function Header() {
                     </DropDownMenu>
                 </DropDown>
                 :
-                    <ButtonLogin onClick={() => {navigate('/login')}}>Fazer Login</ButtonLogin>
+                    <ButtonLogin onClick={ () => navigate('/login') }>Fazer Login</ButtonLogin>
                 }
             </HeaderButtons>
 

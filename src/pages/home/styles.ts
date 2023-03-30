@@ -17,26 +17,26 @@ export const ShortsContainer = styled.div`
 `;
 
 export const ShortsLogoContainer = styled.div`
-    margin: 24px 0 24px 8px;
+    margin: 24px 0 24px 20px;
     width: 100%;
     height: 30px;
-    display: flex;
     align-items: center;
     span {
-        align-items: center;
-        font-size: 17px;
-        font-weight: bold;
+        font-size: 20px;
+        font-weight: 400;
     }
+    align-self: center;
+    display: flexbox;
+    flex-direction: row;
 `;
 
 export const ShortsLogo = styled.img`
     margin-right: 12px;
-    width: 15px;
+    width: 16px;
     height: 20px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    position: relative;
+    top: 2px;
+
 `;
 
 export const Divider = styled.div`

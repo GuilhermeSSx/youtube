@@ -11,6 +11,13 @@ export const Container = styled.div<{ openMenu: boolean }>`
     overflow-y: auto;
     position: sticky;
     top: 55px;
+
+    img {
+        -webkit-user-drag: none; 
+        -khtml-user-drag: none; 
+        -moz-user-drag: none; 
+        -o-user-drag: none; 
+    }
 `;
 
 export const MenuItem = styled.div<{ openMenu: boolean }>`
@@ -28,7 +35,7 @@ export const MenuItem = styled.div<{ openMenu: boolean }>`
     span {
         font-weight: ${({ openMenu}) => openMenu? '450' : '300'};;
         margin: ${({ openMenu}) => openMenu? '20px' : 'none'};;
-        font-size: ${({ openMenu}) => openMenu? '16px' : '11px'};;
+        font-size: ${({ openMenu}) => openMenu? '15px' : '11px'};;
     }
     :hover {
         background-color: #f2f2f2;
@@ -36,6 +43,6 @@ export const MenuItem = styled.div<{ openMenu: boolean }>`
 `;
 
 export const ButtonIcon = styled.img`
-    width: 20px;
-    height: 20px;
+    width: 17px;
+    height: 18px;
 `;

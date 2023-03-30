@@ -2,7 +2,7 @@ import Categories from "../../components/categories";
 import Shorts from "../../components/shorts";
 import VideoComponent from "../../components/videoComponent";
 import { Container, Divider, ShortsContainer, ShortsLogo, ShortsLogoContainer } from "./styles";
-import ShortsIcon from '../../assets/shorts.png';
+import ShortsIcon from '../../assets/shorts_home.png';
 
 const videos = [
     {
@@ -27,9 +27,9 @@ const videos = [
         time: '2 dias'
     },
     {
-        image: 'https://i.ytimg.com/vi/AYrVDgcliF4/maxresdefault.jpg',
-        title: 'Power Rangers: Agora e Sempre | Trailer oficial | Netflix Netflix Brasil ',
-        channel: 'Bruno Bandeira',
+        image: 'https://i.ytimg.com/vi/A6su7JaR_54/maxresdefault.jpg',
+        title: 'Introducing iPhone 15 Pro | Apple - (Concept Trailer)',
+        channel: 'Apple Official',
         views: '1,5 milhões',
         time: '2 dias'
     },
@@ -55,9 +55,9 @@ const videos = [
         time: '2 dias'
     },
     {
-        image: 'https://i.ytimg.com/vi/AYrVDgcliF4/maxresdefault.jpg',
-        title: 'Power Rangers: Agora e Sempre | Trailer oficial | Netflix Netflix Brasil ',
-        channel: 'Bruno Bandeira',
+        image: 'https://i.ytimg.com/vi/A6su7JaR_54/maxresdefault.jpg',
+        title: 'Introducing iPhone 15 Pro | Apple - (Concept Trailer)',
+        channel: 'Apple Official',
         views: '1,5 milhões',
         time: '2 dias'
     }

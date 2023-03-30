@@ -8,6 +8,7 @@ import Home from "./pages/home";
 import Library from "./pages/library";
 import History from "./pages/history";
 import Login from "./pages/login";
+import UploadVideo from "./pages/upload_video";
 
 function App() {
   const { openMenu } = useContext(UserContext);
@@ -27,6 +28,7 @@ function App() {
               <Route path='/library' element={<Library />} />
               <Route path='/history' element={<History />} />
               <Route path='/login' element={<Login />} />
+              <Route path='/upload_video' element={<UploadVideo />} />
             </Routes>
           </div>
         </div>
