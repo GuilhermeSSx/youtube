@@ -1,22 +1,9 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
-    margin-top: 100px;
-    margin-left: 310px;
-    background-color: #d1d1d1;
-    width: 700px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 20px;
-    border: 5px solid rgba(255, 255, 255, .5);
-    backdrop-filter: blur(3px);
-    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 50);
-`;
-
 export const ContainerUploadVideo = styled.div`
-    margin: 5px;
-    width: 690px;
+    margin: 65px 50px;
+    padding: 5px;
+    width: 88%;
     height: 500px;
     border: 1px solid #000;
     border-radius: 10px;
@@ -25,6 +12,7 @@ export const ContainerUploadVideo = styled.div`
     background-color: white;
     display: flex;
     flex-direction: column;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 50);
 `;
 
 export const FormUploadVideo = styled.div`

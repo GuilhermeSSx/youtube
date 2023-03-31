@@ -22,7 +22,7 @@ function App() {
           <div>
             <Menu openMenu={openMenu}/>
           </div>
-          <div>
+          <div className="ContentPages">
             <Routes>
               <Route path='/' element={<Home openMenu={openMenu}/>} />
               <Route path='/library' element={<Library />} />

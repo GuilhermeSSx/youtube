@@ -1,4 +1,8 @@
 .Content {
-    width: 100%;
     display: flex;
+}
+
+.ContentPages {
+    flex: 1;
+    margin: 0 30px;
 }

@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 export const Container = styled.div<{ openMenu: boolean }>`
-    width: ${({ openMenu}) => openMenu? '250px' : '72px'};
+    width: ${({ openMenu}) => openMenu? '240px' : '72px'};
     height: calc(100vh - 55px);
     box-sizing: border-box;
-    padding: ${({ openMenu}) => openMenu? '10px 10px 10px 10px' : '5px 5px 5px 5px'};
+    padding: ${({ openMenu}) => openMenu? '14px 12px 12px 12px' : '4px 4px 4px 4px'};
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -23,7 +23,7 @@ export const Container = styled.div<{ openMenu: boolean }>`
 export const MenuItem = styled.div<{ openMenu: boolean }>`
     width: 98%;
     height: 20px;
-    min-height: ${({ openMenu}) => openMenu? '45px' : '70px'};
+    min-height: ${({ openMenu}) => openMenu? '40px' : '70px'};
     border-radius: 10px;
     cursor: pointer;
     padding: 2px 15px;

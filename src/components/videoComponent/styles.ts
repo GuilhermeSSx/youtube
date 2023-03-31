@@ -1,14 +1,16 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    width: 343px;
+    min-width: 330px;
+    max-width: 360px;
     display: flex;
     flex-direction: column;
 `;
 
 export const ImageBanner = styled.img`
     width: 100%;
-    height: 210px;
+    min-height: 185px;
+    max-height: 200px;
     border-radius: 10px;
     cursor: pointer;
     :hover {

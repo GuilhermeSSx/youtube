@@ -73,7 +73,7 @@ function Header() {
                     <DropDownMenu dropMenu={dropMenu}>
                         <DropDownItem>
                             <li>
-                                <img alt='' style={{ width: '22px', height: '22px'}}></img>
+                                <img src={Lupa} alt='' style={{ width: '22px', height: '22px'}}></img>
                                 <span>Cadastro</span>
                             </li>
                             <li onClick={() => logOut()}>
