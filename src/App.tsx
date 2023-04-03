@@ -9,6 +9,7 @@ import Library from "./pages/library";
 import History from "./pages/history";
 import Login from "./pages/login";
 import CreateVideo from "./pages/create_video";
+import Search from "./pages/search";
 
 function App() {
   const { openMenu } = useContext(UserContext);
@@ -29,6 +30,7 @@ function App() {
               <Route path='/history' element={<History />} />
               <Route path='/login' element={<Login />} />
               <Route path='/create-video' element={<CreateVideo />} />
+              <Route path='/search' element={<Search />} />
             </Routes>
           </div>
         </div>

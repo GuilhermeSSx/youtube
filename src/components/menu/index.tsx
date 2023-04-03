@@ -32,14 +32,14 @@ function Menu({ openMenu }: IProps) {
         <>
             <Container openMenu={openMenu}>
             {Items1.map((item) => (
-                <MenuItem openMenu={openMenu} onClick={() => navigate(item.link)}>
+                <MenuItem key={item.name} openMenu={openMenu} onClick={() => navigate(item.link)}>
                     <ButtonIcon draggable="false" alt="" src={item.img}/>
                     <span>{item.name}</span> 
                 </MenuItem>
             ))}
             <Divider />
             {Items2.map((item) => (
-                <MenuItem openMenu={openMenu} onClick={() => navigate(item.link)}>
+                <MenuItem key={item.name} openMenu={openMenu} onClick={() => navigate(item.link)}>
                     <ButtonIcon draggable="false" alt="" src={item.img}/>
                     <span>{item.name}</span> 
                 </MenuItem>

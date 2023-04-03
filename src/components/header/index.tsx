@@ -28,6 +28,7 @@ import UserImgLogo from "../../assets/user.png";
 import { UserContext } from "../../contexts/userContext";
 import { useContext, useState } from 'react';
 import { useNavigate } from "react-router-dom";
+import { VideoContext } from "../../contexts/videoContext";
 
 
 function Header() {
@@ -35,7 +36,9 @@ function Header() {
     const navigate = useNavigate();
 
     const { openMenu, setOpenMenu, login, logOut, user} = useContext(UserContext);
+    const { Search_Video } = useContext(VideoContext);
     const [dropMenu, setDropMenu] = useState(false);
+    const [search, setSearch] = useState('');
 
     return (
         <Container>
@@ -54,9 +57,9 @@ function Header() {
             { /* 2 */}
             <SearchContainer>
                 <SearchInputContainer>
-                    <SearchInput placeholder="Pesquisar" />
+                    <SearchInput type='text' value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Pesquisar" />
                 </SearchInputContainer>
-                <SearchButton>
+                <SearchButton onClick={() => { Search_Video(search); navigate(`/search?search=${search}`); } }>
                     <ButtonIcon alt="" src={Lupa} />
                 </SearchButton>
                 <ButtonContainer margin='0 0 0 10px'>
@@ -83,7 +86,7 @@ function Header() {
                                     <img  style={{width: '30px', height: '30px'}}alt='' src={UserImgLogo} />
                                     <DropHeaderText>
                                         <p>{`@${user.nome}`}</p>
-                                        <a href="my-account" target='_blank' >Gerenciar sua Conta do Google</a>
+                                        <a href="my-account" >Gerenciar sua Conta do Google</a>
                                     </DropHeaderText>
                                 </DropHeaderContainer>
                                 <Divider />
