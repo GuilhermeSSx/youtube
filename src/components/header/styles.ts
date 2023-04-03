@@ -13,7 +13,6 @@ export const Container = styled.header`
     position: sticky;
     top: 0px;
     z-index: 2;
-
     img {
         -webkit-user-drag: none; 
         -khtml-user-drag: none; 
@@ -44,6 +43,7 @@ export const ButtonContainer = styled.div<{ margin?: string }>`
 export const ButtonIcon = styled.img`
     width: 18px;
     justify-content: space-between;
+    user-select: none;
 `;
 
 export const SearchContainer = styled.div`
@@ -58,10 +58,15 @@ export const SearchInputContainer = styled.div`
     display: flex;
     align-items: center;
     padding: 0 16px;
+    &:focus-within {
+        border: 1px solid #1653ba;
+        box-shadow: 10px 0 10px 1px rgba(0, 0, 0, 0.10);
+
+    }
 `;
 
 export const SearchInput = styled.input`
-    width: 100px;
+    width: 100%;
     height: 25px;
     outline: none;
     border: none;
@@ -90,6 +95,7 @@ export const HeaderButtons = styled.div`
 `;
 
 export const ButtonLogin = styled.button`
+    
     width: 128px;
     height: 34px;
     padding: 0 15px;
@@ -106,7 +112,7 @@ export const ButtonLogin = styled.button`
     outline: none;
     font-size: 15px;
     font-weight: 500;
-    margin-left: 5px;
+    margin-left: 20px;
     &:hover {
         background-color: rgba(0, 153, 255, 0.1);
         border: none;
@@ -124,21 +130,23 @@ export const DropDownMenu = styled.div<{ dropMenu: boolean }>`
     height: auto;
     border: 1px solid #d3d3d3;
     position: absolute;
-    left: -130px;
-    top: calc(100% + 5px);
+    left: -190px;
+    top: calc(100% + 1px);
     border-radius: 10px;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.20);
+    padding: 10px;
     li {
         list-style: none;
         width: 100%;
         height: 40px;
         display: flex;
         align-items: center;
+        justify-content: space-between;
         font-size: 15px;
         cursor: pointer;
         :hover {
             background-color: #d3d3d3;
-            border-radius: 10px;
+            border-radius: 5px;
         }
     }
 `;
@@ -151,6 +159,32 @@ export const DropDownItem = styled.div`
         margin: 20px;
         font-size: 16px;
     }
+
+`;
+
+export const DropHeaderContainer = styled.div`
+    display: flex;
+    padding: 10px;
+    
+`;
+
+export const DropHeaderText = styled.div`
+    margin-left: 10px;
+    font-size: 13px;
+    flex-direction: column;
+    a {
+        width: 100%;
+        text-decoration: none;
+        color: blue;
+    }
+`;
+
+
+export const UserImg = styled.img`
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    user-select: none;
 `;
 
 

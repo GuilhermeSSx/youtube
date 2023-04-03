@@ -23,9 +23,9 @@ export const FormContainer = styled.div`
 `;
 
 export const InputLogin = styled.input`
-    width: 200px;
+    width: 300px;
     height: 34px;
-    margin: 5px 0;
+    margin: 5px 20px;
     padding: 0 15px;
     border: 1px solid #ccc;
     border-radius: 10px;

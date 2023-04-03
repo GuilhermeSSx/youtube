@@ -18,7 +18,7 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Header />
-        <div className="Content">
+        <div className="MainContent">
           <div>
             <Menu openMenu={openMenu}/>
           </div>
