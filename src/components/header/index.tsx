@@ -59,7 +59,7 @@ function Header() {
             </SearchContainer>
             { /* 3 */}
             <HeaderButtons>
-                <ButtonContainer onClick={() => navigate('/upload_video')} margin='0 0 0 10px'>
+                <ButtonContainer onClick={() => navigate('/create-video')} margin='0 0 0 10px'>
                     <ButtonIcon alt="" src={VideoIcon} />
                 </ButtonContainer>
                 <ButtonContainer margin='0 0 0 10px'>

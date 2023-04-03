@@ -13,6 +13,7 @@ export const UserStore = ({ children }: any) => {
         api.get('/user/get-user', {headers: {Authorization: token}}).then(({ data }) => {
             setUser(data.user);
             setLogin(true);
+            
         }).catch((error) => {
             console.log(error);
         })
@@ -35,6 +36,16 @@ export const UserStore = ({ children }: any) => {
             setToken(data.token);
             getUser(data.token);
         }).catch((error) => {
+            alert('Usuário não encontrado');
+            console.log(error);
+        })
+    }
+
+    const SingUp = (name: string, email: string, password: string) => {
+        api.post('/user/sign-up', {name, email, password}).then(() => {
+            alert('Usuário cadastrado com sucesso');
+        }).catch((error) => {
+            alert('Erro ao cadastrar usuário');
             console.log(error);
         })
     }
@@ -46,7 +57,8 @@ export const UserStore = ({ children }: any) => {
             login,
             user,
             handleLogin,
-            logOut
+            logOut,
+            SingUp
         }}>
             {children}
         </UserContext.Provider>

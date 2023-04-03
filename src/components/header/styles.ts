@@ -12,7 +12,7 @@ export const Container = styled.header`
     justify-content: space-between;
     position: sticky;
     top: 0px;
-    z-index: 1;
+    z-index: 2;
 
     img {
         -webkit-user-drag: none; 

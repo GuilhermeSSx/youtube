@@ -3,10 +3,13 @@ import { UserContext } from '../../contexts/userContext';
 import { ButtonLogin, Container, FormContainer, Divider, InputLogin } from './styles';
 
 function Login() {
-    const { handleLogin } = useContext(UserContext);
+    const { handleLogin, SingUp } = useContext(UserContext);
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [name, setName] = useState('');
+    const [emailReg, setEmailReg] = useState('');
+    const [passwordReg, setPasswordReg] = useState('');
 
     return (
         <Container>
@@ -18,11 +21,11 @@ function Login() {
             </FormContainer>
             <Divider />
             <FormContainer>
-                <h3>Não possui cadastro ?</h3>
-                <InputLogin placeholder='nome' type='name' />
-                <InputLogin placeholder='email' type='email' />
-                <InputLogin placeholder='password' type='password' />
-                <ButtonLogin onClick={() => handleLogin(email, password)}>Cadastrar</ButtonLogin>
+                <h3 style={{color: 'blue'}}>Não possui cadastro ?</h3>
+                <InputLogin placeholder='nome' type='name' value={name} onChange={(e) => setName(e.target.value)} />
+                <InputLogin placeholder='email' type='email' value={emailReg} onChange={(e) => setEmailReg(e.target.value)} />
+                <InputLogin placeholder='password' type='password' value={passwordReg} onChange={(e) => setPasswordReg(e.target.value)} />
+                <ButtonLogin onClick={() => SingUp(name, emailReg, passwordReg)}>Cadastrar</ButtonLogin>
             </FormContainer>
         </Container>
 

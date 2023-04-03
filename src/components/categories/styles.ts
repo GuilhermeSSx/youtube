@@ -8,6 +8,7 @@ export const Container = styled.div`
     background-color: white;
     position: fixed;
     top: 55px;
+    z-index: 1;
 `;
 
 export const CtButton = styled.button`
