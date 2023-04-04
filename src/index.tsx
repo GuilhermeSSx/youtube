@@ -16,7 +16,6 @@ root.render(
         <App />
       </VideoStore>
     </UserStore>
-    
   </React.StrictMode>
 );
 

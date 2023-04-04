@@ -42,7 +42,7 @@ function Header() {
 
     return (
         <Container>
-            { /* 1 */}
+            { /* 1 Logo */}
             <LogoContainer>
                 <ButtonContainer onClick={() => setOpenMenu(!openMenu)} margin='0 15px 0 0'>
                     <ButtonIcon alt="" src={HamburguerIcon}/>
@@ -54,10 +54,10 @@ function Header() {
                     onClick={() => navigate('/')}
                 />
             </LogoContainer>
-            { /* 2 */}
+            { /* 2 Search */}
             <SearchContainer>
                 <SearchInputContainer>
-                    <SearchInput type='text' value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Pesquisar" />
+                    <SearchInput type={'text'} value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Pesquisar" />
                 </SearchInputContainer>
                 <SearchButton onClick={() => { Search_Video(search); navigate(`/search?search=${search}`); } }>
                     <ButtonIcon alt="" src={Lupa} />
@@ -66,7 +66,7 @@ function Header() {
                     <ButtonIcon alt="" src={MicIcon} />
                 </ButtonContainer>
             </SearchContainer>
-            { /* 3 */}
+            { /* 3 Buttons Right */}
             <HeaderButtons>
                 <ButtonContainer onClick={() => navigate('/create-video')} margin='0 0 0 10px'>
                     <ButtonIcon alt="" src={VideoIcon} />
@@ -78,7 +78,6 @@ function Header() {
                     <DropDown> 
                         <ButtonContainer style={{marginLeft: '30px'}} onClick={() => setDropMenu(!dropMenu)}>
                             <UserImg alt='' src={UserImgLogo} />
-                                { /* Inicial do nome do contexto aqui Gui*/ }
                         </ButtonContainer>
                         <DropDownMenu dropMenu={dropMenu}>
                             <DropDownItem>
@@ -86,7 +85,7 @@ function Header() {
                                     <img  style={{width: '30px', height: '30px'}}alt='' src={UserImgLogo} />
                                     <DropHeaderText>
                                         <p>{`@${user.nome}`}</p>
-                                        <a href="my-account" >Gerenciar sua Conta do Google</a>
+                                        <a href="my-account">Gerenciar sua Conta do Google</a>
                                     </DropHeaderText>
                                 </DropHeaderContainer>
                                 <Divider />

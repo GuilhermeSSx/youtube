@@ -19,12 +19,10 @@ export const VideoStore = ({ children }: any) => {
     const Search_Video = ( search: string ) => {
         api.get(`/videos/search?search=${search}`).then(( { data } ) => {
             setVideoSearch(data.videos);
-            console.log(videoSearch);
         }).catch((error) => {
             console.log(error);
         })
     }
-
 
     return (
         <VideoContext.Provider value={{ 

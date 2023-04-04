@@ -60,7 +60,7 @@ export const SearchInputContainer = styled.div`
     padding: 0 16px;
     &:focus-within {
         border: 1px solid #1653ba;
-        box-shadow: 10px 0 10px 1px rgba(0, 0, 0, 0.10);
+        box-shadow: 1px 0 2px 0 rgba(0, 0, 0, 0.5);
 
     }
 `;
