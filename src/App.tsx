@@ -31,7 +31,7 @@ function App() {
               <Route path='/history' element={<History />} />
               <Route path='/login' element={<Login />} />
               <Route path='/create-video' element={<CreateVideo />} />
-              <Route path='/my-videos' element={<MyVideos />} />
+              <Route path='/get-videos/:user_id' element={<MyVideos />} />
               <Route path='/search' element={<Search />} />
             </Routes>
           </div>

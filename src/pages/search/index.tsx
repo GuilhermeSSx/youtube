@@ -1,30 +1,25 @@
 import { VideoContext } from "../../contexts/videoContext";
 import { useContext } from "react";
-import { Container } from "./styles";
+import { Container, FilterContainer, VideosSearchContainer } from "./styles";
+import VideoSearchComponent from "../../components/videoSearchComponent";
 
 function Search() {
-    const { Search_Video } = useContext(VideoContext);
-
-    console.log(Search_Video);
+    const { videoSearch } = useContext(VideoContext);
 
     return (
-        <div>
-            <h1>Search</h1>
-            <Container>
-                <div>
-                    {
-                        Search_Video.map((video: any) => {
-                            return (
-                                <div key={video.video_id}>
-                                    {video.title}
-                                </div>
-                            )
-                        })
-                    }
-                </div>
-            </Container>
-        </div>
-
+        <Container>
+            <VideosSearchContainer>
+                <span>Filtros</span>
+                <FilterContainer />
+                {
+                    videoSearch.map((video: any) => {
+                        return (
+                            <VideoSearchComponent key={video.video_id} video={video}/>
+                        )
+                    })
+                }
+            </VideosSearchContainer>
+        </Container>
     )
 }
 

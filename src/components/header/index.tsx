@@ -36,9 +36,15 @@ function Header() {
     const navigate = useNavigate();
 
     const { openMenu, setOpenMenu, login, logOut, user} = useContext(UserContext);
-    const { Search_Video } = useContext(VideoContext);
+    const { Search_Video, Videos_User } = useContext(VideoContext);
     const [dropMenu, setDropMenu] = useState(false);
     const [search, setSearch] = useState('');
+
+    function searchInputIsBlank(){
+        if(search !== ''){
+            { Search_Video(search); navigate(`/search?search=${search}`); }
+        }
+    }
 
     return (
         <Container>
@@ -59,7 +65,7 @@ function Header() {
                 <SearchInputContainer>
                     <SearchInput type={'text'} value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Pesquisar" />
                 </SearchInputContainer>
-                <SearchButton onClick={() => { Search_Video(search); navigate(`/search?search=${search}`); } }>
+                <SearchButton onClick={() => searchInputIsBlank() }>
                     <ButtonIcon alt="" src={Lupa} />
                 </SearchButton>
                 <ButtonContainer margin='0 0 0 10px'>
@@ -89,7 +95,7 @@ function Header() {
                                     </DropHeaderText>
                                 </DropHeaderContainer>
                                 <Divider />
-                                <li>
+                                <li onClick={ () => { Videos_User(user.id); navigate(`/get-videos/${user.id}`); } }>
                                     <img src={SubsIcon} alt='' style={{ width: '22px', height: '22px'}}></img>
                                     <span>Meus Videos</span>
                                 </li>
