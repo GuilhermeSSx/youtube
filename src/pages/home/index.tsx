@@ -115,13 +115,12 @@ function Home({ openMenu }: IProps) {
                 <Shorts />
                 <Shorts />
             </ShortsContainer>
+            <Divider />
             <Container openMenu={openMenu}>
                 {videos.map((video) => (
                     <VideoComponent key={video.keynumber} video={video}/>
                 ))}
             </Container>
-            <Divider />
-
         </div>
     )
 }

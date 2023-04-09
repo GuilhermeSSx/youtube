@@ -12,7 +12,7 @@ export const ContainerUploadVideo = styled.div`
     background-color: white;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 50);
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .30);
 `;
 
 export const FormUploadVideo = styled.div`

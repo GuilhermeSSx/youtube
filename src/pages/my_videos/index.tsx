@@ -1,6 +1,6 @@
-import VideoSearchComponent from "../../components/videoSearchComponent";
+import MyVideosComponent from "../../components/myVideosComponent";
 import { VideoContext } from "../../contexts/videoContext";
-import { Container, MyVideosContainer } from "./styles";
+import { Container, HeaderRowVideos, MyVideosContainer, RowContainer } from "./styles";
 import { useContext } from "react";
 
 function MyVideos() {
@@ -11,10 +11,17 @@ function MyVideos() {
         <Container>
             <MyVideosContainer>
                 <h3>Meus Videos</h3>
+                <HeaderRowVideos>
+                    <RowContainer>
+                        <button>Excluir Video</button>
+                        <button>Editar Video</button>
+                    </RowContainer>
+                </HeaderRowVideos>
                 {
                     videosUser.map((video: any) => {
                         return (
-                            <VideoSearchComponent key={video.video_id} video={video}/>
+                            
+                            <MyVideosComponent key={video.video_id} video={video}/>
                         )
                     })
                 }
