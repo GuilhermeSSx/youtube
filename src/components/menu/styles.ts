@@ -11,7 +11,6 @@ export const Container = styled.div<{ openMenu: boolean }>`
     overflow-y: auto;
     position: sticky;
     top: 55px;
-
     img {
         -webkit-user-drag: none; 
         -khtml-user-drag: none; 
@@ -20,7 +19,7 @@ export const Container = styled.div<{ openMenu: boolean }>`
     }
 `;
 
-export const MenuItem = styled.div<{ openMenu: boolean }>`
+export const MenuItem = styled.div<{ openMenu: boolean, active: boolean }>`
     width: 98%;
     height: 20px;
     min-height: ${({ openMenu}) => openMenu? '40px' : '70px'};
@@ -32,6 +31,7 @@ export const MenuItem = styled.div<{ openMenu: boolean }>`
     flex-direction: ${({ openMenu}) => openMenu? 'row' : 'column'};;
     align-items: center;
     justify-content: ${({ openMenu}) => openMenu? 'none' : 'center'};
+    background-color: ${({ active }) => active ? '#f2f2f2' : '#fff'};
     span {
         font-weight: ${({ openMenu}) => openMenu? '450' : '300'};;
         margin: ${({ openMenu}) => openMenu? '20px' : 'none'};;

@@ -10,6 +10,11 @@ import SubsIcon from '../../assets/subscribers.png';
 import { Divider } from "../header/styles";
 import { useNavigate } from "react-router-dom";
 
+function ActivePageItem() {
+    const activePage = window.location.pathname;
+    return activePage 
+}
+
 const Items1 = [
     {name: 'Início', link: '/', img: Home},
     {name: 'Shorts', link: '/shorts', img: ShortsIcon},
@@ -29,23 +34,31 @@ function Menu({ openMenu }: IProps) {
     const navigate = useNavigate();
 
     return (
-        <>
+        <div className="MenuContainer">
             <Container openMenu={openMenu}>
             {Items1.map((item) => (
-                <MenuItem key={item.name} openMenu={openMenu} onClick={() => navigate(item.link)}>
-                    <ButtonIcon draggable="false" alt="" src={item.img}/>
-                    <span>{item.name}</span> 
+                <MenuItem
+                    key={item.name}
+                    openMenu={openMenu}
+                    onClick={() => navigate(item.link)}
+                    active={item.link === ActivePageItem() ? true : false}>
+                        <ButtonIcon draggable="false" alt="" src={item.img}/>
+                        <span>{item.name}</span> 
                 </MenuItem>
             ))}
             <Divider />
             {Items2.map((item) => (
-                <MenuItem key={item.name} openMenu={openMenu} onClick={() => navigate(item.link)}>
-                    <ButtonIcon draggable="false" alt="" src={item.img}/>
-                    <span>{item.name}</span> 
+                <MenuItem 
+                    key={item.name}
+                    openMenu={openMenu}
+                    onClick={() => navigate(item.link)}
+                    active={item.link === ActivePageItem() ? true : false}>
+                        <ButtonIcon draggable="false" alt="" src={item.img}/>
+                        <span>{item.name}</span> 
                 </MenuItem>
             ))}
             </Container>
-        </>
+        </div>
     )
 }
 
