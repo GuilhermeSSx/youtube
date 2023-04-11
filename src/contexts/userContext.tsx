@@ -36,7 +36,7 @@ export const UserStore = ({ children }: any) => {
             setToken(data.token);
             getUser(data.token);
         }).catch((error) => {
-            alert('Usuário não encontrado');
+            alert('Usuário ou credenciais inválidos');
             console.log(error);
         })
     }

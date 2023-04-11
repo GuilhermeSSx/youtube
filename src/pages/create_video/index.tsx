@@ -4,11 +4,21 @@ import Upload from '../../assets/upload.png';
 import { VideoContext } from "../../contexts/videoContext";
 import { UserContext } from '../../contexts/userContext';
 
+
+
 function CreateVideo() {
     const { Create_Video } = useContext(VideoContext);
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
     const { user } = useContext(UserContext);
+
+    function InputIsBlank(){
+        if(title !== ''){
+            { Create_Video( user.id, title, description ) }
+        } else {
+            alert('Digite um título diferente de vazio');
+        }
+    }
 
     return (
         <ContainerUploadVideo>
@@ -19,7 +29,7 @@ function CreateVideo() {
                 <InputUpVideo placeholder='Descrição do vídeo' type='description' value={description} onChange={(e) => setDescription(e.target.value)}/>
                 <h5>Clique para selecionar seu arquivo de video.</h5>
                 <img src={Upload} style={{ width: '50px', height: '50px', cursor: 'pointer'}} alt='' />
-                <ButtonUpVideo onClick={() => Create_Video( user.id, title, description )}>Enviar Video</ButtonUpVideo>
+                <ButtonUpVideo onClick={() => InputIsBlank()}>Enviar Video</ButtonUpVideo>
             </FormUploadVideo>
         </ContainerUploadVideo>
     )
