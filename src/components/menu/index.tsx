@@ -34,7 +34,7 @@ function Menu({ openMenu }: IProps) {
     const navigate = useNavigate();
 
     return (
-        <div className="MenuContainer">
+        <>
             <Container openMenu={openMenu}>
             {Items1.map((item) => (
                 <MenuItem
@@ -58,7 +58,7 @@ function Menu({ openMenu }: IProps) {
                 </MenuItem>
             ))}
             </Container>
-        </div>
+        </>
     )
 }
 

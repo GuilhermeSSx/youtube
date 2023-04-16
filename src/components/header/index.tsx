@@ -14,7 +14,9 @@ import { ButtonContainer,
     UserImg,
     DropHeaderContainer,
     DropHeaderText,
-    Divider
+    Divider,
+    BtnsLogged,
+    UserImgDropDown
 } from "./styles";
 import HamburguerIcon from '../../assets/hamburger.png';
 import Logo from '../../assets/youtube-logo.png';
@@ -74,23 +76,30 @@ function Header() {
             </SearchContainer>
             { /* 3 Buttons Right */}
             <HeaderButtons>
-                <ButtonContainer onClick={() => navigate('/create-video')} margin='0 0 0 10px'>
-                    <ButtonIcon alt="" src={VideoIcon} />
-                </ButtonContainer>
-                <ButtonContainer margin='0 0 0 10px'>
-                    <ButtonIcon alt="" src={Notification} />
-                </ButtonContainer>
+                {login? 
+                    <BtnsLogged>
+                        <ButtonContainer onClick={() => navigate('/create-video')} margin='0 0 0 10px'>
+                            <ButtonIcon alt="" src={VideoIcon} />
+                        </ButtonContainer>
+                        <ButtonContainer margin='0 0 0 10px'>
+                            <ButtonIcon alt="" src={Notification} />
+                        </ButtonContainer>
+                    </BtnsLogged>
+                :
+                    <></>
+                }
                 {login?
                     <DropDown> 
-                        <ButtonContainer style={{marginLeft: '30px'}} onClick={() => setDropMenu(!dropMenu)}>
+                        <ButtonContainer onClick={() => setDropMenu(!dropMenu)}>
                             <UserImg alt='' src={UserImgLogo} />
                         </ButtonContainer>
                         <DropDownMenu dropMenu={dropMenu}>
                             <DropDownItem>
                                 <DropHeaderContainer>
-                                    <img  style={{width: '30px', height: '30px'}}alt='' src={UserImgLogo} />
+                                    <UserImgDropDown alt='' src={UserImgLogo} />
                                     <DropHeaderText>
-                                        <p>{`@${user.nome}`}</p>
+                                        <span>{user.nome}</span>
+                                        <span>{`@${user.nome}`}</span>
                                         <a href="my-account">Gerenciar sua Conta do Google</a>
                                     </DropHeaderText>
                                 </DropHeaderContainer>

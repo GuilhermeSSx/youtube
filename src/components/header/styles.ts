@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-
 export const Container = styled.header`
     width: 100%;
     height: 55px;
@@ -88,15 +87,23 @@ export const SearchButton = styled.div`
 `;
 
 export const HeaderButtons = styled.div`
-    width: 225px;
+    min-width: 225px;
     height: 40px;
     display: flex;
     align-items: center;
+    justify-content: flex-end;
+    margin: 0 8px;
+`;
+
+export const BtnsLogged = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 16px;
 `;
 
 export const ButtonLogin = styled.button`
-    
-    width: 128px;
+    width: 118px;
     height: 34px;
     padding: 0 15px;
     border-width: 1px;
@@ -112,7 +119,6 @@ export const ButtonLogin = styled.button`
     outline: none;
     font-size: 15px;
     font-weight: 500;
-    margin-left: 20px;
     &:hover {
         background-color: rgba(0, 153, 255, 0.1);
         border: none;
@@ -126,14 +132,14 @@ export const DropDown = styled.div`
 export const DropDownMenu = styled.div<{ dropMenu: boolean }>`
     visibility: ${({ dropMenu }) => dropMenu ? 'visible' : 'hidden'};
     background-color: #fff;
-    width: 250px;
+    width: 280px;
     height: auto;
-    border: 1px solid #d3d3d3;
+    border: none;
     position: absolute;
-    left: -190px;
+    left: -252px;
     top: calc(100% + 1px);
     border-radius: 10px;
-    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.20);
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
     padding: 10px;
     li {
         list-style: none;
@@ -164,26 +170,37 @@ export const DropDownItem = styled.div`
 
 export const DropHeaderContainer = styled.div`
     display: flex;
-    padding: 10px;
-    
+    padding: 6px;
+`;
+
+export const UserImgDropDown = styled.img`
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 20px;
 `;
 
 export const DropHeaderText = styled.div`
-    margin-left: 10px;
-    font-size: 13px;
+    display: flex;
+    font-size: 14px;
     flex-direction: column;
+    span {
+        margin: 0 0 2px 0;
+    }
     a {
+        margin-top: 5px;
         width: 100%;
         text-decoration: none;
         color: blue;
     }
 `;
 
-
 export const UserImg = styled.img`
-    width: 26px;
-    height: 26px;
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
+    border: none;
+    margin: 0 20px;
     user-select: none;
 `;
 

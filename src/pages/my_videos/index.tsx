@@ -1,6 +1,6 @@
 import MyVideosComponent from "../../components/myVideosComponent";
 import { VideoContext } from "../../contexts/videoContext";
-import { Container, HeaderRowVideos, MyVideosContainer, RowContainer } from "./styles";
+import { ContainerMV, HeaderRowVideos, MyVideosContainer, RowContainer } from "./styles";
 import { useContext } from "react";
 
 function MyVideos() {
@@ -8,7 +8,7 @@ function MyVideos() {
     const { videosUser } = useContext(VideoContext);
 
     return (
-        <Container>
+        <ContainerMV>
             <MyVideosContainer>
                 <h3>Meus Videos</h3>
                 <HeaderRowVideos>
@@ -26,7 +26,7 @@ function MyVideos() {
                     })
                 }
             </MyVideosContainer>
-        </Container>
+        </ContainerMV>
 
     )
 }
